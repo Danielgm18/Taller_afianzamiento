@@ -1,0 +1,112 @@
+#Autor: Daniel Gómez Micán 
+
+#1.Desarrollar un programa que imprima el cuadrado del número que el usuario ingresa, mientras que el número ingresado no sea negativo.
+print("EJERCICIO 1")
+def problema1():
+    ej1= float(input("Ingrese un numero: "))
+    if ej1>0:
+        print(ej1**2)
+problema1()
+
+#2:Desarrollar un programa que dado un numero entero positivo n calcule e imprima n/2 si es par o 3n + 1 si es impar.
+#El programa debe repetir el proceso con el numero resultado de dicha operacion mientras este sea diferente de 1. 
+print("EJERCICIO 2")
+def problema2():
+    ej2 = int(input("Ingrese un número entero positivo: "))
+    while ej2 != 1:
+        print(ej2, end=" ")
+        if ej2 % 2 == 0:
+            ej2 = ej2 // 2
+        else:
+            ej2 = 3 * ej2 + 1
+    print(1)
+problema2()
+
+#3:En 2022 el paıs A tendra una poblacion de 25 millones de habitantes y el paıs B de 18.9 millones. 
+#Las tasas de crecimiento anual de la poblacion seran de 2% y 3% respectivamente. 
+# Desarrollar un programa que imprima el a ̃no en que la poblaci ́on del pa ́ıs B superara a la de A.
+print("EJERCICIO 3")
+def problema3():
+    año = 2025
+    A = 25.0
+    B = 18.9
+    while B <= A:
+        A *= 1.02
+        B *= 1.03
+        año += 1
+    print(f"En el año {año}, la población de B supera a la de A")
+problema3()
+
+#4:Diseñar una funcion que permita calcular el ́epsilon de la maquina. La idea es realizar un ciclo en el cual se realiza la
+#operacion 1 +  para potencias de 2 desde  = 20 y continuando con potencias decrecientes de 
+#2= 2−1,  = 2−2,  = 2−3,  = 2−4, . . .hasta obtener que el resultado de la suma 1 +  no se altere.
+print("EJERCICIO 4")
+def problema4():
+    ej4 = 1.0
+    while 1.0 + ej4 != 1.0:
+        ej4 /= 2.0
+    ej4 *= 2.0  
+    print("Épsilon de la máquina es:", ej4)
+problema4()
+
+#5:Imprimir un listado con los numeros del 1 al 100 cada uno con su respectivo cuadrado.
+print("EJERCICIO 5")
+def problema5():
+    for i in range(1, 101):
+        print(f"{i} → {i**2}")
+problema5()
+
+#6:Imprimir un listado con los numeros impares desde 1 hasta 999 y seguidamente otro listado con los numeros pares desde 2 hasta 1000.
+print("EHERCICIO 6")
+def problema6():
+    print("Impares:")
+    for i in range(1, 1000, 2):
+        print(i, end=" ")
+    print("\nPares:")
+    for i in range(2, 1001, 2):
+        print(i, end=" ")
+problema6()
+
+#7:Imprimir los numeros pares en forma descendente hasta 2 que son menores o iguales a un numero natural n ≥ 2 dado.
+print("EJERCICIO 7")
+def problema7():
+    n = int(input("Ingrese un número mayor o igual a 2: "))
+    for ej7 in range(n if n % 2 == 0 else n-1, 1, -2):
+        print(ej7, end=" ")
+problema7()
+
+#8:Imprimir los numeros de 1 hasta un numero natural n dado, cada uno con su respectivo factorial.
+print("EJERCICIO 8")
+n = int(input("Ingrese un número natural: "))
+def problema8():
+    def factorial(n):
+        resultado = 1
+        for i in range(1, n+1):
+            resultado *= i
+        return resultado
+
+    for i in range(1, n+1):
+        print(f"{i}! = {factorial(i)}")
+problema8()
+#9:Calcular el valor de 2 elevado a la potencia n.
+print("EJERCICIO 9")
+def problema9():
+    n = int(input("Ingrese el exponente n: "))
+    print(f"2^{n} = {2**n}")
+problema9()
+#10:Leer un numero natural n, leer otro dato de tipo real x y calcular x
+print("EJERCICIO 10")
+def problema10():
+    n = int(input("Ingrese el exponente n: "))
+    x = float(input("Ingrese el valor de x: "))
+    print(f"{x}^{n} = {x**n}")
+problema10()
+
+#11:Diseñe un programa que muestre las tablas de multiplicar del 1 al 9.
+print("EJERCICIO 11")
+def problema11():
+    for i in range(1, 10):
+        print(f"\nTabla del {i}")
+        for j in range(1, 11):
+            print(f"{i} x {j} = {i*j}")
+problema11()
